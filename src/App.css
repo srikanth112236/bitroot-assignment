@@ -1,38 +1,238 @@
-.App {
-  text-align: center;
+.body{
+  width: 100%;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* header stylings goes here */
+.header{
+  display: flex;align-items: center;
+  width: 100%;
+  height: 100px;
+  margin: auto;
+  background-color: rgba(118, 153, 190, 0.092);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* posts styling goes here */
+
+.posts{
   display: flex;
-  flex-direction: column;
+  min-height: 1350px !important;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.post-cards{
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+
+}
+.post-card{
+ position: relative;
+  overflow: hidden;
+  width: 40% !important;
+  margin: auto;
+  margin: 20px;
+  box-shadow: 3px 5px 5px 3px #e5e3e3;
+}
+.post-image{
+ 
+  width: 100%;
+  height: 230px;
+}
+.post-image:hover{
+  opacity: 1;
+  filter: brightness(0.4);
+  color: #fff;
+  cursor: pointer;
+}
+.learn-more{
+  font-size: 24px;
+  height: 0;
+
+  text-decoration: none;
+  color: #fff !important;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+
+/* image hover effect */
+
+.image-hover-text-container 
+{
+  position: relative;
+  display: inline-block;
+
+  width: 100%;
+  height: auto;
+  transition: all 0.2s linear;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+
+
+
+
+.image-hover-text 
+{
+  position: absolute;
+  color: #fff;
+  top: 0;
+  width: 100%;  
+  height: 100%;
+  margin: 0 auto;
+  opacity: 0;
+  cursor: default;
+  transition: opacity 0.2s linear;
+}
+.image-hover-text:hover 
+{
+  opacity: 1;
+  color: #fff;
+}
+
+
+.image-hover-text-bubble 
+{
+  position: relative;
+  box-sizing: border-box;
+  top: 0; left: 0; right: 100%;
+  height: 230px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.486);
+  border: 1px solid #848484;
+  /* border-radius: 50%; */
+  margin: 0 auto;
+  padding: 18% 8px 5px 8px;
+  overflow: hidden;
+  font-size: 17px;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.image-hover-text .image-hover-text-title
+{
+  font-size: 25px;
+  display: block;
+}
+
+/* image hover effect */
+
+/* post body stylings goes here */
+.post-body{
+  padding: 25px;
+}
+.circles{
+  display: flex;
+  height: 40px;align-items: center;
+}
+.blue-circle{
+  border-radius: 20px;
+  margin: 0px 1px;
+  width: 15px !important;height: 15px !important;background-color: rgb(24, 203, 239) !important;
+}
+.yellow-circle{
+  border-radius: 20px;
+  margin: 0px 10px;
+  width: 15px !important;height: 15px !important;background-color: rgb(217, 187, 18) !important;
+}
+.post-title{
+  margin: 10px 0px;
+}
+.post-description,.post-footer{
+  margin: 30px 0px;
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: left;
+  font-family: 'Anek Latin', sans-serif;
+font-weight: 500;
+font-style: normal;
+  color: #2523236b;
+}
+.post-footer{
+  display: flex;
+  width: 96%;
+  justify-content: space-between;
+}
+.modal-backdrop.fade {
+  opacity: 0.3 !important;
+}
+
+.modal-flex{
+  display: flex;
+  height: 50px;align-items: center;
+  justify-content: space-evenly;
+}
+.modal-post-image{
+ 
+  width: 100%;
+  height: 160px !important;
+}
+.modal-dialog {
+  max-width: 500px !important;
+  margin: 0rem auto !important;
+}
+.modal{
+  top: 11% !important;
+  height: 82% !important;
+}
+.modal-image{
+  height: 40px;width: 40px;border-radius: 50px;
+}
+/* footer stylings starts here */
+.footer{
+  width: 100%;
+  height: 80px;
+  background-color: #000;
+  text-align: center;
+  color: #fff;
+  display: flex;align-items: center;
+  font-size: 18px !important;
+}
+
+
+
+/* media quires goes here */
+@media screen and (max-width:568px){
+  .post-card {
+
+    width: 90% !important;
+
+
+}
+.modal-dialog {
+  width: 85% !important;
+  margin: 0rem auto !important;
+}
+
+
+}
+
+@media screen and (min-width:320px) and (max-width:440px){
+  .learn-more{
+    display: flex;justify-content: center;align-items: center;
+    height: 100px;
   }
 }
+@media screen and (min-width:440px) and (max-width:520px){
+  .learn-more{
+    display: flex;justify-content: center;align-items: center;
+    height: 70px;
+  }
+}
+
+@media screen and (min-width:568px) and (max-width:768px){
+  .post-card {
+
+    min-width: 85% !important;
+
+}
+}
+/* media quires goes here */
+
+
+
+
+
